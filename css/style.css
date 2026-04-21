@@ -1,0 +1,502 @@
+/* =========================
+   CSS RESET
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-light {
+    background-color: #ffe6ac;
+}
+
+.section-gray {
+    background-color: #f3f3f3;
+}
+
+.section-white {
+    background-color: #ffffff;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary,
+.btn-dark,
+.send-btn {
+    display: inline-block;
+    padding: 16px 22px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #c78c06;
+    color: #222;
+}
+
+.btn-primary:hover {
+    background-color: #ffe6ac;
+}
+
+.btn-dark,
+.send-btn {
+    background-color: #222;
+    color: #ffffff;
+}
+
+.btn-dark:hover,
+.send-btn:hover {
+    background-color: #c78c06;
+    color: #222;
+}
+
+.btn-outline {
+    border: 1px solid #c78c06;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+    background-color: #222;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav a {
+    display: block;
+    padding: 14px 16px;
+    color: #c78c06;
+    text-align: center;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    background-color: #c78c06;
+    color: #222;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-form input {
+    flex: 1;
+    border: 1px solid #c78c06;
+    padding: 10px 12px;
+}
+
+.search-form button {
+    background-color: #222;
+    border: 1px solid #c78c06;
+    color: #c78c06;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background-image: url("../images/main-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-box {
+    background-color: rgba(34, 34, 34, 0.75);
+    color: #ffffff;
+    padding: 25px 20px;
+}
+
+.hero-box h1,
+.hero-box p {
+    color: #ffffff;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.service-card {
+    background-color: #ffe6ac;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.service-content {
+    padding: 18px 15px;
+}
+
+.service-content .btn-dark {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =========================
+   VISION
+========================= */
+.vision {
+    background-image: url("../images/vision.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.vision-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 60px 0;
+}
+
+.vision-content h2,
+.vision-content p {
+    color: #ffffff;
+}
+
+/* =========================
+   TEAM
+========================= */
+.team-member {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+    background-color: #ffe6ac;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-text {
+    padding: 20px;
+}
+
+.job-title {
+    font-weight: 700;
+    border-bottom: 2px solid #c78c06;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.contact-form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-box label {
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-form-box textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.location-box iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.hours-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-box th,
+.hours-box td {
+    border: 1px solid #222;
+    padding: 12px;
+    text-align: left;
+}
+
+.hours-box th {
+    background-color: #ffe6ac;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+    background-color: #222;
+    color: #c78c06;
+    padding: 20px 0;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+}
+
+.site-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   TABLET / DESKTOP
+========================= */
+@media screen and (min-width: 760px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+    }
+
+    .main-nav {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .main-nav .nav-list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-form {
+        max-width: 260px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-overlay {
+        min-height: 600px;
+    }
+
+    .hero-box {
+        max-width: 700px;
+        padding: 40px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .service-card.digital {
+        grid-column: span 3;
+    }
+
+    .service-card.marketing {
+        grid-column: span 3;
+    }
+
+    .service-card.video {
+        grid-column: span 2;
+    }
+
+    .service-card.web {
+        grid-column: span 2;
+    }
+
+    .service-card.print {
+        grid-column: span 2;
+    }
+
+    .team-member {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-member-reverse .team-image {
+        order: 2;
+    }
+
+    .team-member-reverse .team-text {
+        order: 1;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "form map"
+            "hours hours";
+        align-items: start;
+    }
+
+    .contact-form-box {
+        grid-area: form;
+    }
+
+    .location-box {
+        grid-area: map;
+    }
+
+    .hours-box {
+        grid-area: hours;
+    }
+}
